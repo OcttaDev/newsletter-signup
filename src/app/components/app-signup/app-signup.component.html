@@ -1,0 +1,60 @@
+<div class="container">
+  <form
+    class="form-container"
+    [formGroup]="checkEmail"
+    (ngSubmit)="emailSuccess()"
+  >
+    <div class="description-text">
+      <h1 class="form-title">Stay updated!</h1>
+      <p class="form-paragraph">
+        Join 60.000+ product managers receiving monthly updates on:
+      </p>
+    </div>
+    <div class="updates-container">
+      <div class="update">
+        <img src="../../../assets/images/icon-list.svg" alt="" />
+        <span>Product discovery and building what matters</span>
+      </div>
+      <div class="update">
+        <img src="../../../assets/images/icon-list.svg" alt="" />
+        <span>Measuring to ensure updates are a success</span>
+      </div>
+      <div class="update">
+        <img src="../../../assets/images/icon-list.svg" alt="" />
+        <span>And much more!</span>
+      </div>
+    </div>
+    <div class="form-input">
+      <div class="label-container">
+        <label for="Email Address">Email address</label>
+        <p [id]="showAlert">Valid email required</p>
+      </div>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="email@company.com"
+        formControlName="email"
+        [id]="input"
+      />
+      <button class="form-button" [disabled]="!checkEmail.valid">
+        Subscribe to monthly newsletter
+      </button>
+    </div>
+  </form>
+
+  <div class="image-container">
+    <div class="desktop-image">
+      <img
+        src="../../../assets/images/illustration-sign-up-desktop.svg"
+        alt=""
+      />
+    </div>
+    <div class="mobile-image">
+      <img
+        src="../../../assets/images/illustration-sign-up-mobile.svg"
+        alt=""
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="message-container">
+    <div class="image-container">
+      <img src="../../../assets/images/icon-success.svg" />
+    </div>
+    <h1 class="title">Thanks for subscribing</h1>
+    <p class="paragraph">
+      A confirmation email has been sent to <strong>{{ user }}</strong
+      >. Please open it and click the button inside to confirm your subscription
+    </p>
+    <button (click)="returnRegister()" class="button-confirm">
+      Dismiss message
+    </button>
+  </div>
+</div>
